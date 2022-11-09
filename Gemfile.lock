@@ -1,0 +1,66 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (6.1.4.1)
+      activesupport (= 6.1.4.1)
+    activerecord (6.1.4.1)
+      activemodel (= 6.1.4.1)
+      activesupport (= 6.1.4.1)
+    activesupport (6.1.4.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    concurrent-ruby (1.1.9)
+    dotenv (2.7.6)
+    i18n (1.8.11)
+      concurrent-ruby (~> 1.0)
+    minitest (5.14.4)
+    multi_json (1.15.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    mysql2 (0.5.3)
+    pg (1.2.3)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
+    ruby2_keywords (0.0.5)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
+    sinatra-activerecord (2.0.23)
+      activerecord (>= 4.1)
+      sinatra (>= 1.0)
+    sinatra-contrib (2.1.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.1.0)
+      sinatra (= 2.1.0)
+      tilt (~> 2.0)
+    sinatra-reloader (1.0)
+      sinatra-contrib
+    stripe (5.39.0)
+    tilt (2.0.10)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.5.1)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  activerecord
+  dotenv
+  mysql2
+  pg
+  rack
+  sinatra
+  sinatra-activerecord
+  sinatra-reloader
+  stripe
+
+BUNDLED WITH
+   2.2.31
