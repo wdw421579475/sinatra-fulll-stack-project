@@ -1,17 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
-gem 'stripe'
-gem 'dotenv'
-gem 'activerecord'
-gem 'sinatra-activerecord'
+gem 'sqlite3'
+gem "dm-core"
+gem "dm-migrations"
 gem 'sinatra-reloader'
-gem 'rack'
-
-group :development do
-  gem 'mysql2'
-end
-
-group :production do
-    gem 'pg'
-end
+gem "dm-timestamps"
+gem "slim"
+gem "sass"
+gem "thin"
+gem "pg"
+gem "dm-sqlite-adapter", :group => :development
