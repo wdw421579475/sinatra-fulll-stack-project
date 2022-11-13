@@ -1,0 +1,81 @@
+<html>
+<body>
+<form action="/bet" method="post">
+<head>
+  <h1> Gambling Site </h1>
+</head>
+<style type="text/css">
+  .bet {
+    position: relative;
+    top: 0px;
+    left: 16px;
+    width: 200px;
+    border: 8px solid black;
+    padding: 20px;
+    margin: 20px;
+  }
+  .cur {
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    width: 200px;
+    border: 8px solid black;
+    padding: 20px;
+    margin: 20px;
+  }
+  .total {
+    width: 800px;
+    height: 40px;
+    border: 8px solid black;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+  }
+</style>
+<h3>Welcome to the Gambling Site </h3>
+  <% if session[:notice] %>
+  <h4><%= session[:notice] %> </h4>
+  <% session[:notice] = nil %>
+  <% end %>
+  <div class="bet">
+    <label for="money"><b>Input How much to bet</b></label>
+    <input type="text" placeholder="Enter Money" name="money" required><br><br>
+    <label for="psw"><b>Choose a number from 1-6</b></label>
+    <select class="form-select" placeholder="Dice Number" name="guess" required>
+      <option selected></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <button type="submit">Bet</button><br><br>
+
+  </div>
+</form>
+
+<div class="cur">
+    <label for="cwin"><b>Current Win</b></label>
+    <input type="text"   value= "<%= session[:win] %>" disabled>
+    <br><br>
+    <label for="closs"><b>Current Loss</b></label>
+    <input type="text"  value= "<%= session[:lost] %>" disabled>
+    <br><br>
+	<label for="cprofit"><b>Current Profit</b></label>
+    <input type="text"  value= "<%= session[:win] - session[:lost]%>" disabled>
+    <br><br>
+</div>
+
+<p> Account Summary</p>
+<div class="total">
+    <label for="win"><b>Total Win</b></label>
+    <input type="text"  value ="<%= session[:total_win]%>" disabled>
+    <label for="loss"><b>Total Loss</b></label>
+    <input type="text" value ="<%= session[:total_lost]%>"  disabled>
+	  <label for="profit"><b>Total Profit</b></label>
+    <input type="text" value ="<%= session[:total_win] - session[:total_lost]%>" disabled>
+  </div>
+<button><a href="/logout"> log out</a></button>
+</body>
+</html>

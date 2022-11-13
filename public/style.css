@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    float: left;
+    width:100%;
+    margin:0;
+    text-align: center;
+    background-color: #d3d4df;
+}
+
+.page{
+    display: inline-block;
+    width:80%;
+    max-width: 1064px;
+    text-align: center;
+}
+
+.title{
+    background: #deb623;
+    padding: 20px;
+    margin: 0
+}
+ 
